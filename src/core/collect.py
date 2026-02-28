@@ -74,10 +74,10 @@ def collect_results(data: Iterator, parameter: str=None, function: str="average"
 def get_results(file: str, parameter: str, function: str="average") -> Dict:
     """ 
     EN: Gets the computed results for a `parameter` related to the single csv-file, taking into
-    account the applied function.
+    account the applied `function`.
 
-    RU: Получает результаты вычислений по параметру относящиеся к одному CSV-файлу 
-    с учётом применения функции .
+    RU: Получает результаты вычислений по параметру `parameter` относящиеся к одному CSV-файлу 
+    с учётом применения функции `function`.
     """
     try:
         results = collect_results(file, parameter, function)
