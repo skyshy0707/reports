@@ -25,6 +25,7 @@
 python ./src/main.py --files csv_file_1.csv csv_file_2.csv ... --report [function]-[parameter]
 
 Для работы с этим инструментом вы можете использовать примеры CSV-файлов, расположенные в корне проекта:
+
 ![alt text](https://github.com/skyshy0707/reports/blob/master/images/csv-files-list.PNG?raw=true)
 
 
@@ -32,6 +33,7 @@ python ./src/main.py --files csv_file_1.csv csv_file_2.csv ... --report [functio
 
 У вас есть файл `economic1.csv` со слудующим содержимым:
 
+```text
 country,year,gdp,gdp_growth,inflation,unemployment,population,continent
 United States,2023,25462,2.1,3.4,3.7,339,North America
 United States,2022,23315,2.1,8.0,3.6,338,North America
@@ -39,6 +41,7 @@ United States,2022,23315,2.1,8.0,3.6,338,North America
 Australia,2023,1693,2.1,5.2,3.7,26,Oceania
 Australia,2022,1675,3.7,6.6,3.7,26,Oceania
 Australia,2021,1543,1.6,2.9,5.1,26,Oceania
+```
 
 Как вы видите, он содержит столбец `country`. Вы можете передавать любое название стобца, чьи данные могут быть преобразованы в десятичное
 число. И в этом файле это столбцы: `year`, `gdp`, `gdp_growwth`, `inflation`, `unemployment`, `population`.
@@ -51,7 +54,7 @@ Australia,2021,1543,1.6,2.9,5.1,26,Oceania
 python.exe ./src/main.py --files economic1.csv --report maximum-unemployment
 ```
 
-Тогда вывод будет выглядеть:
+Тогда вывод будет выглядеть так:
 
 ![alt text](https://github.com/skyshy0707/reports/blob/master/images/output-1-trial.PNG?raw=true)
 
@@ -122,6 +125,7 @@ pip install -r requirements.txt
 ```
 
 Конечно, вы можете просто установить зависимости глобально:
+-----------------------------------------------------------
 
 ```bash
 pip install -r requirements.txt
