@@ -4,17 +4,17 @@ in the `source` by applying a `mathematical operation` to the data collected for
 The `mathematical operation` [`function`] can be set to one of the following: [`average`, `cumulative`, `maximum`, `minimum`]
 
 > [!WARNING]
-> The tool only works with csv files that require sufficient rights for the user running the tool to open them.
+>> The tool only works with csv files that require sufficient rights for the user running the tool to open them.
 
-> Column names should start with latin alphabet symbols or arabic numbers only. If it is not, you should be avare while you set `parameter`, 
+>> Column names should start with latin alphabet symbols or arabic numbers only. If it is not, you should be avare while you set `parameter`, 
 and skip these symbols in this case.
 
-> Required columns in every csv-file are `country`, [`parameter`]. Where `parameter` is the name of the column whose data will be applied 
+>> Required columns in every csv-file are `country`, [`parameter`]. Where `parameter` is the name of the column whose data will be applied 
 to the mathematical operation `function`. Default value for `parameter` is `gdp`. If you want to set the another one you should make sure
 that desirable `parameter` is exist as column name is in the file passed to the command. Default value for `function` is `average`. Above,
 you have seen allowed values for `function`.
 
-> Data type for the `parameter` column should be a decimal number. Otherwise, the tool will skip these data. If you receive a nan value in
+>> Data type for the `parameter` column should be a decimal number. Otherwise, the tool will skip these data. If you receive a nan value in
 your result for a country, this means the data have type that cannot be converted to a decimal number.
 
 
@@ -30,6 +30,7 @@ A more live example:
 
 You have csv-file named `economic1.csv` with next content:
 
+```text
 country,year,gdp,gdp_growth,inflation,unemployment,population,continent
 United States,2023,25462,2.1,3.4,3.7,339,North America
 United States,2022,23315,2.1,8.0,3.6,338,North America
@@ -37,6 +38,7 @@ United States,2022,23315,2.1,8.0,3.6,338,North America
 Australia,2023,1693,2.1,5.2,3.7,26,Oceania
 Australia,2022,1675,3.7,6.6,3.7,26,Oceania
 Australia,2021,1543,1.6,2.9,5.1,26,Oceania
+```
 
 As you have seen, it have column `country`. You can use any column whose data can be converted to decimal numbers. And these columns are
 `year`, `gdp`, `gdp_growwth`, `inflation`, `unemployment`, `population` in this csv-file.
@@ -131,4 +133,10 @@ These tests cover all possible outputs regarding their composition.
 
 ```bash
 pytest --log-cli-level=INFO -v src/tests/tests.py --files=[FILES ...] --report=[average, cumulative, maximum, minimum]-parameter
+```
+
+Example:
+
+```bash
+pytest --log-cli-level=INFO -v src/tests/tests.py --files="economic1.csv economic2.csv"
 ```

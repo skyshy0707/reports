@@ -140,3 +140,9 @@ pip install -r requirements.txt
 ```bash
 pytest --log-cli-level=INFO -v src/tests/tests.py --files=[FILES ...] --report=[average, cumulative, maximum, minimum]-parameter
 ```
+
+Пример:
+
+```bash
+pytest --log-cli-level=INFO -v src/tests/tests.py --files="economic1.csv economic2.csv"
+```
