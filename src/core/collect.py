@@ -41,10 +41,10 @@ def collect_results(data: Iterator, parameter: str=None, function: str="average"
     """
     EN: Groups the given list of dictionaries results `data` by `parameter` into lists of countries 
     and applies the function `function` to them 
-    the `function`.
+    the `function`
     
     RU: Группирует переданные в виде списка словарей результаты `data` по `parameter` в списки по
-    странам и применяет к ним функцию `function`.
+    странам и применяет к ним функцию `function`
     """
     results = {}
     for row in data:
@@ -74,10 +74,10 @@ def collect_results(data: Iterator, parameter: str=None, function: str="average"
 def get_results(file: str, parameter: str, function: str="average") -> Dict:
     """ 
     EN: Gets the computed results for a `parameter` related to the single csv-file, taking into
-    account the applied `function`.
+    account the applied `function`
 
     RU: Получает результаты вычислений по параметру `parameter` относящиеся к одному CSV-файлу 
-    с учётом применения функции `function`.
+    с учётом применения функции `function`
     """
     try:
         results = collect_results(file, parameter, function)
@@ -91,7 +91,7 @@ def get_results(file: str, parameter: str, function: str="average") -> Dict:
 def represent_results(results: Dict, parameter: str) -> None:
     """
     EN: Outputs to the console the `results` for each country sorted in 
-    descending order.
+    descending order
 
     RU: Выводит в консоль отсортированные в убывающем порядке результаты `results` 
     по каждой стране
