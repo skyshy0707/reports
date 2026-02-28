@@ -1,6 +1,11 @@
 """
-Collect from csv-objects represented as csv.DictReader data and apply
-passed mathmatical function
+Module implements the core logic that collects data from csv-objects represented as 
+`csv.DictReader` data. It applies the passed mathematical function to the data and
+outputs the results to stdout.
+
+Модуль реализует основную логику, которая собирает данные из CSV-объектов, 
+представленных в виде данных `csv.DictReader`. Применяет к данным переданную 
+математическую функцию и выводит результаты в стандартный вывод.
 """
 
 import tabulate
