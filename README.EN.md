@@ -7,13 +7,13 @@ The `mathematical operation` [`function`] can be set to one of the following: [`
 >> The tool only works with csv files that require sufficient rights for the user running the tool to open them.
 
 >> Column names should start with latin alphabet symbols or arabic numbers only. Double quotes are allowed. In this case, double quotes 
-are not used when specifying the `parameter` parameter. Otherwise, take note of other characters when setting the parameter `parameter` 
-and omit them.
+are not used when specifying the `parameter` parameter. Otherwise, you should take other things into account when setting the parameter 
+`parameter` and in this case, skip other characters that are before its name.
 
->> Required columns in every csv-file are `country`, [`parameter`]. Where `parameter` is the name of the column whose data will be applied 
-to the mathematical operation `function`. Default value for `parameter` is `gdp`. If you want to set the another one you should make sure
-that desirable `parameter` is exist as column name is in the file passed to the command. Default value for `function` is `average`. Above,
-you have seen allowed values for `function`.
+>> Required columns in every csv-file are `country`, [`parameter`]. Where `parameter` is the column name to which data the mathematical 
+operation `function` will be applied. Default value for `parameter` is `gdp`. If you want to set the another one you should make sure 
+that desirable `parameter` is exist as column name is in the file passed to the command. Default value for `function` is `average`. 
+Above, you have seen allowed values for `function`.
 
 >> Data type for the `parameter` column should be a decimal number. Otherwise, the tool will skip these data. If you receive a nan value in
 your result for a country, this means the data have type that cannot be converted to a decimal number.
