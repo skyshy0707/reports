@@ -6,8 +6,8 @@ The `mathematical operation` [`function`] can be set to one of the following: [`
 > [!WARNING]
 >> The tool only works with csv files that require sufficient rights for the user running the tool to open them.
 
->> Column names should start with latin alphabet symbols or arabic numbers only. If it is not, you should be avare while you set `parameter`, 
-and skip these symbols in this case.
+>> Column names should start with latin alphabet symbols or arabic numbers only. Double quotes are allowed. Otherwise, take this into 
+account when setting the parameter `parameter` and omit these characters.
 
 >> Required columns in every csv-file are `country`, [`parameter`]. Where `parameter` is the name of the column whose data will be applied 
 to the mathematical operation `function`. Default value for `parameter` is `gdp`. If you want to set the another one you should make sure
