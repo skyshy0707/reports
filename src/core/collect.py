@@ -44,11 +44,10 @@ def aggregate_result(collect_func: Callable) -> Dict:
 @aggregate_result
 def collect_results(data: Iterator, parameter: str=None, function: str="average") -> Dict:
     """
-    EN: Groups the given list of dictionaries results `data` by `parameter` into lists of countries 
-    and applies the function `function` to them 
-    the `function`
+    EN: Groups the results of `data` passed as a list of dictionaries into lists of countries by 
+    `parameter` and applies the function `function` to them
     
-    RU: Группирует переданные в виде списка словарей результаты `data` по `parameter` в списки по
+    RU: Группирует по `parameter` переданные в виде списка словарей результаты `data` в списки по
     странам и применяет к ним функцию `function`
     """
     results = {}
@@ -78,11 +77,11 @@ def collect_results(data: Iterator, parameter: str=None, function: str="average"
 
 def get_results(file: str, parameter: str, function: str="average") -> Dict:
     """ 
-    EN: Gets the computed results for a `parameter` related to the single csv-file, taking into
-    account the applied `function`
+    EN: Gets the results of computing the function `function` applied to the data of the column 
+    `parameter` related to a single csv-file
 
-    RU: Получает результаты вычислений по параметру `parameter` относящиеся к одному CSV-файлу 
-    с учётом применения функции `function`
+    RU: Получает результаты вычислений функции `function`, применённой к данным столбца `parameter` 
+    относящегося к одному CSV-файлу
     """
     try:
         results = collect_results(file, parameter, function)
