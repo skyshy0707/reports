@@ -88,12 +88,6 @@ test_cases = [
         "--files economic1.csv economic3.txt --report average-gdp",
         "usage: main.py [-h] [--files [FILES ...]] [--report REPORT]\n"\
         "main.py: error: argument --files: Invalid file format: economic3.txt"
-    ),
-    #NB! Create `economic4.csv` and remove read rights from current user, otherwise this next test will be fail:
-    (
-        "--files economic4.csv --report average-gdp",
-        "usage: main.py [-h] [--files [FILES ...]] [--report REPORT]\n"\
-        "main.py: error: argument --files: can't open 'economic4.csv': [Errno 13] Permission denied: 'economic4.csv'"
     )
 ]
 
